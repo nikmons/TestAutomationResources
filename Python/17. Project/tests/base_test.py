@@ -24,7 +24,7 @@ class BaseTest(unittest.TestCase):
         print("##################")
         self.driver = webdriver.Chrome(options=options)
         # self.driver = webdriver.Firefox()
-        self.driver.get("http://www.amazon.com")
+        # self.driver.get("http://www.amazon.com")
 
     def tearDown(self):
         self.driver.close()
