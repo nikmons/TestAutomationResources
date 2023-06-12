@@ -27,6 +27,9 @@ class LetCodeTestLocators():
     lc_shadow = (By.XPATH, "shadow //a[.='DOM']")
     lc_snake_game = (By.XPATH, "snake_game //a[.='Play it!']")
 
+class LetCodeEditLocators():
+    lc_input_full_name = (By.XPATH, "//input[@id='fullName']")
+
 class HomePageLocators():
     yt_search_field = (By.ID, "search")
     yt_search_button = (By.CLASS_NAME, "style-scope ytd-searchbox")

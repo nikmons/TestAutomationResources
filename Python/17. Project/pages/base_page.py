@@ -15,13 +15,5 @@ class BasePage():
         """ Performs click on web element whose locator is passed to it"""
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
     
-    
-
-    def enter_text(self, by_locator, text):
-        """ Performs text entry of the passed in text, in a web element whose locator is passed to it"""
-        return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).send_keys(text)
-
-    def get_title(self, title) -> str:
-        """Returns the title of the page"""
-        WebDriverWait(self.driver, 10).until(EC.title_is(title))
-        return self.driver.title
+    def find(self, by_locator):
+        return self.driver.find_element("xpath", by_locator)
