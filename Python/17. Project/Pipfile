@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 selenium = "*"
+pylance = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 

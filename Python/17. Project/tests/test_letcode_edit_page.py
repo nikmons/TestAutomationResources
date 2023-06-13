@@ -1,6 +1,7 @@
 import sys
 import os
 import unittest
+import time
 
 from tests.base_test import BaseTest
 
@@ -18,6 +19,8 @@ class FTestLetCodeEditPage(BaseTest):
         self.home_page.navigate_to_edit()
 
         assert self.driver.current_url == "https://letcode.in/edit"
+
+        time.sleep(10)
 
         self.home_page.write_full_name("TEST TEST")
 

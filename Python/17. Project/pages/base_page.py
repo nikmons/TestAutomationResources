@@ -1,5 +1,7 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webdriver import WebDriver
 
 class BasePage():
     """The BasePage class holds all common functionality across the website.
@@ -7,7 +9,7 @@ class BasePage():
     not be easy to understand.
     """
 
-    def __init__(self, driver):
+    def __init__(self, driver: WebDriver):
         """ This function is called every time a new object of the base class is created"""
         self.driver = driver
     
@@ -16,4 +18,4 @@ class BasePage():
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
     
     def find(self, by_locator):
-        return self.driver.find_element("xpath", by_locator)
+        return self.driver.find_element(By.XPATH, str(by_locator))
