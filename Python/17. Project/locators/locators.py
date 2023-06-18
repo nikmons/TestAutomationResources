@@ -1,35 +1,35 @@
 from selenium.webdriver.common.by import By
 
 class LetCodeTestLocators():
-    lc_edit_link = (By.XPATH, "//a[.='Edit']")
-    lc_click = (By.XPATH, "//a[.='Click']")
-    lc_drop_down = (By.XPATH, " //a[.='Drop-Down']")
-    lc_alert = (By.XPATH, " //a[.='Dialog']")
+    XP_EDIT_LINK: str = "//a[.='Edit']"
+    XP_CLICK: str = "//a[.='Click']"
+    XP_DROP_DOWN: str = " //a[.='Drop-Down']"
+    XP_ALERT: str = " //a[.='Dialog']"
 
-    lc_inner_html = (By.XPATH, "//a[.='Inner HTML']")
-    lc_toggle = (By.XPATH, "//a[.='Toggle']")
-    lc_tabs = (By.XPATH, "//a[.='Tabs']")
-    lc_find_elements = (By.XPATH, "//a[.='Find Elements']")
+    XP_INNER_HTML: str = "//a[.='Inner HTML']"
+    XP_TOGGLE: str = "//a[.='Toggle']"
+    XP_TABS: str = "//a[.='Tabs']"
+    XP_FIND_ELEMENTS: str = "//a[.='Find Elements']"
 
-    lc_drag = (By.XPATH, "drag //a[.='AUI - 1']")
-    lc_drop = (By.XPATH, "drop //a[.='AUI - 2']")
-    lc_sort = (By.XPATH, "sort //a[.='AUI - 3']")
-    lc_nulti_select = (By.XPATH, "multi_select //a[.='AUI - 4']")
+    XP_DRAG: str = "drag //a[.='AUI - 1']"
+    XP_DROP: str = "drop //a[.='AUI - 2']"
+    XP_SORT: str = "sort //a[.='AUI - 3']"
+    XP_MULTI_SELECT: str = "multi_select //a[.='AUI - 4']"
 
-    lc_slider = (By.XPATH, "slider //a[.='AUI - 5']")
-    lc_tables_simple = (By.XPATH, "table_simple //a[.='Simple table']")
-    lc_tables_advanced = (By.XPATH, "table_advanced //a[.='Advance table']")
-    lc_calendar = (By.XPATH, "datetime //a[.='Date & Time']")
+    XP_SLIDER: str = "slider //a[.='AUI - 5']"
+    XP_TABLES_SIMPLE: str = "table_simple //a[.='Simple table']"
+    XP_TABLES_ADVANCED: str = "table_advanced //a[.='Advance table']"
+    XP_CALENDAR: str = "datetime //a[.='Date & Time']"
 
-    lc_wait = (By.XPATH, "wait //a[.='Timeout']")
-    lc_form = (By.XPATH, "form //a[.='All in One']")
-    lc_files = (By.XPATH, "files //a[.='File management']")
-    lc_shadow = (By.XPATH, "shadow //a[.='DOM']")
-    lc_snake_game = (By.XPATH, "snake_game //a[.='Play it!']")
+    XP_WAIT: str = "wait //a[.='Timeout']"
+    XP_FORM: str = "form //a[.='All in One']"
+    XP_FILES: str = "files //a[.='File management']"
+    XP_SHADOW: str = "shadow //a[.='DOM']"
+    XP_SNAKE_GAME: str = "snake_game //a[.='Play it!']"
 
 class LetCodeEditLocators():
-    lc_input_full_name = (By.XPATH, "//input[@id='fullName']")
+    XP_INPUT_FULL_NAME: str = "//input[@id='fullName']"
 
 class HomePageLocators():
-    yt_search_field = (By.ID, "search")
-    yt_search_button = (By.CLASS_NAME, "style-scope ytd-searchbox")
+    yt_search_field: By = (By.ID, "search")
+    yt_search_button: By = (By.CLASS_NAME, "style-scope ytd-searchbox")

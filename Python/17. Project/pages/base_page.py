@@ -13,9 +13,9 @@ class BasePage():
         """ This function is called every time a new object of the base class is created"""
         self.driver = driver
     
-    def click(self, by_locator):
+    def click_by_xpath(self, by_locator: str):
         """ Performs click on web element whose locator is passed to it"""
-        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, by_locator))).click()
     
-    def find(self, by_locator):
-        return self.driver.find_element(By.XPATH, str(by_locator))
+    def find_by_xpath(self, by_locator: str):
+        return self.driver.find_element(By.XPATH, by_locator)

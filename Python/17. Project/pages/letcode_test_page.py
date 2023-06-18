@@ -10,11 +10,17 @@ class HomePage(BasePage):
         self.driver.get('https://letcode.in/test')
     
     def navigate_to_edit(self):
-        self.click(LetCodeTestLocators.lc_edit_link)
+        self.click_by_xpath(LetCodeTestLocators.XP_EDIT_LINK)
 
     def write_full_name(self, full_name):
         print(">>>>", self.driver.current_url)
-        full_name_el = self.find(LetCodeEditLocators.lc_input_full_name)
+        full_name_el = self.find_by_xpath(LetCodeEditLocators.XP_INPUT_FULL_NAME)
+        full_name_el.send_keys(full_name)
+        
+    def get_full_name_text(self) -> str:
+        val = self.find_by_xpath(LetCodeEditLocators.XP_INPUT_FULL_NAME).get_attribute("value")
+        print(f">> {val}")
+        return val
 
     def navigate_to_click(self):
-        self.click(LetCodeTestLocators.lc_click)
+        self.click_by_xpath(LetCodeTestLocators.XP_CLICK)

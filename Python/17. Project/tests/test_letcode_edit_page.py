@@ -20,9 +20,14 @@ class FTestLetCodeEditPage(BaseTest):
 
         assert self.driver.current_url == "https://letcode.in/edit"
 
-        time.sleep(10)
+        #time.sleep(10)
 
-        self.home_page.write_full_name("TEST TEST")
+        full_name_val = "Mitsos Mitsou"
+        self.home_page.write_full_name(full_name_val)
+        
+        time.sleep(3)
+        
+        assert self.home_page.get_full_name_text() == full_name_val
 
     def test_navigate_to_click(self):
         self.home_page.navigate_to_click()
