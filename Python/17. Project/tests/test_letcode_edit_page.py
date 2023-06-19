@@ -31,6 +31,12 @@ class FTestLetCodeEditPage(BaseTest):
     def test_append_and_press_tab(self):
         self.home_page.navigate_to_edit()
         
+        append_val = ", thank you"
+        self.home_page.append_text(append_val)
+        
+        assert self.home_page.get_append_text() == "I am good" + append_val
+        
+        
     def test_navigate_to_click(self):
         self.home_page.navigate_to_click()
 

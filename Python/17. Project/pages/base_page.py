@@ -2,6 +2,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.remote.webelement import WebElement
 
 class BasePage():
     """The BasePage class holds all common functionality across the website.
@@ -17,5 +18,9 @@ class BasePage():
         """ Performs click on web element whose locator is passed to it"""
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, by_locator))).click()
     
-    def find_by_xpath(self, by_locator: str):
+    def find_by_xpath(self, by_locator: str) -> WebElement:
         return self.driver.find_element(By.XPATH, by_locator)
+    
+    def send_keys_by_xapth(self, by_locator: str, value: str):
+        self.driver.find_element(By.XPATH, by_locator).send_keys(value)
+        

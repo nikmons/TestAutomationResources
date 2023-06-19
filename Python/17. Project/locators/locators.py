@@ -29,6 +29,11 @@ class LetCodeTestLocators():
 
 class LetCodeEditLocators():
     XP_INPUT_FULL_NAME: str = "//input[@id='fullName']"
+    XP_APPEND: str = "//input[@id='join']"
+    XP_READ: str = "//input[@id='getMe']"
+    XP_CLEAR: str = "//input[@id='clearMe']"
+    XP_DISABLED: str = "//input[@id='noEdit']"
+    XP_READ_ONLY: str = "//input[@id='dontwrite']"
 
 class HomePageLocators():
     yt_search_field: By = (By.ID, "search")
