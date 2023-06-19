@@ -13,14 +13,11 @@ class HomePage(BasePage):
         self.click_by_xpath(LetCodeTestLocators.XP_EDIT_LINK)
 
     def write_full_name(self, full_name):
-        print(">>>>", self.driver.current_url)
         full_name_el = self.find_by_xpath(LetCodeEditLocators.XP_INPUT_FULL_NAME)
         full_name_el.send_keys(full_name)
         
     def get_full_name_text(self) -> str:
-        val = self.find_by_xpath(LetCodeEditLocators.XP_INPUT_FULL_NAME).get_attribute("value")
-        print(f">> {val}")
-        return val
+        return self.find_by_xpath(LetCodeEditLocators.XP_INPUT_FULL_NAME).get_attribute("value")
 
     def navigate_to_click(self):
         self.click_by_xpath(LetCodeTestLocators.XP_CLICK)

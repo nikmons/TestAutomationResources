@@ -14,21 +14,23 @@ class FTestLetCodeEditPage(BaseTest):
     def setUp(self):
         super().setUp()
         self.home_page = HomePage(self.driver)
-
+        
     def test_navigate_to_edit(self):
         self.home_page.navigate_to_edit()
-
         assert self.driver.current_url == "https://letcode.in/edit"
-
-        #time.sleep(10)
-
+        
+    def test_enter_full_name(self):
+        self.home_page.navigate_to_edit()
         full_name_val = "Mitsos Mitsou"
         self.home_page.write_full_name(full_name_val)
         
         time.sleep(3)
         
         assert self.home_page.get_full_name_text() == full_name_val
-
+        
+    def test_append_and_press_tab(self):
+        self.home_page.navigate_to_edit()
+        
     def test_navigate_to_click(self):
         self.home_page.navigate_to_click()
 
