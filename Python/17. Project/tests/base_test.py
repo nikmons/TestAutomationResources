@@ -29,7 +29,7 @@ class BaseTest(unittest.TestCase):
         # Hide debug logs when running in non-verbose mode
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-        print(">> In method: ", self._testMethodName)
+        # print(">> In method: ", self._testMethodName)
         self.driver = webdriver.Chrome(options=options)
 
     def tearDown(self):

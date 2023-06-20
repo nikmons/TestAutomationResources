@@ -7,6 +7,7 @@ name = "pypi"
 selenium = "*"
 pylance = "*"
 beautifulsoup4 = "*"
+html-testrunner = "*"
 
 [dev-packages]
 

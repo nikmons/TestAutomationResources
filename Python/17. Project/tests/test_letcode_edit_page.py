@@ -2,6 +2,7 @@ import sys
 import os
 import unittest
 import time
+import HtmlTestRunner
 
 from tests.base_test import BaseTest
 
@@ -43,4 +44,5 @@ class FTestLetCodeEditPage(BaseTest):
         assert self.driver.current_url == "https://letcode.in/buttons"
     
 if __name__ == "__main__":
-    unittest.main(warnings='ignore')
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:\\report.html"),
+                  warnings='ignore')
