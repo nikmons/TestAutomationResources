@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+# test landing screen locators 
 class LetCodeTestLocators():
     XP_EDIT_LINK: str = "//a[.='Edit']"
     XP_CLICK: str = "//a[.='Click']"
@@ -27,6 +28,7 @@ class LetCodeTestLocators():
     XP_SHADOW: str = "shadow //a[.='DOM']"
     XP_SNAKE_GAME: str = "snake_game //a[.='Play it!']"
 
+# edit screen locators
 class LetCodeEditLocators():
     XP_INPUT_FULL_NAME: str = "//input[@id='fullName']"
     XP_APPEND: str = "//input[@id='join']"
